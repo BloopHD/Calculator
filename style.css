@@ -18,9 +18,10 @@ body {
     gap: 8px;
     height: 750px;
     width: 500px;
-    background-color: rgb(255, 200, 0);
-    box-shadow: 10px 10px rgba(255, 200, 0, 0.35);
+    background-color: rgb(255, 175, 0);
+    box-shadow: 10px 10px rgba(255, 175, 0, 0.35);
     border-radius: 25px;
+    padding: 16px 0 16px 0;
 }
 
 #display {
@@ -28,33 +29,39 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    height:150px;
+    min-height:125px;
+    max-height: fit-content;
     width:450px;
     background-color: beige;
     border-radius: 25px;
     box-shadow: 2px 2px 5px 2px gray inset;
-    margin-bottom: 16px;
+    margin: 16px 0 16px 0;
+    padding: 16px 0 16px 0;
+    word-wrap: break-word;
+
 }
 
 #display-text {
-    display: flex;
-    flex-direction: column;
-    margin-right: 23px;
+    margin: 0 23px 0 23px;
+    max-height: fit-content;
     text-align: end;
 }
 
 #upper-display {
-    height: 35px;
+    min-height: 35px;
+    max-height: fit-content;
     width: 410px;
     font-size: x-large;
     margin: 0 0 8px 0;
 }
 
 #lower-display {
-    height: 45px;
+    min-height: 45px;
+    max-height: fit-content;
     width: 410px;
     font-size: xx-large;
     margin: 8px 0 0 0;
+    flex-grow: 1;
 }
 
 .row {

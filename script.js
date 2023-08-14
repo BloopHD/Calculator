@@ -1,11 +1,12 @@
 let valueOne = "";
 let valueTwo = "";
+let operator = "";
 
 let upperDisplay = document.getElementById('upper-display');
 let lowerDisplay = document.getElementById('lower-display');
 
-upperDisplay.textContent = " ";
-lowerDisplay.textContent = " ";
+upperDisplay.textContent = "";
+lowerDisplay.textContent = "";
 
 const numbers = document.querySelectorAll('.number');
 numbers.forEach(numberButton => {
@@ -18,24 +19,14 @@ operators.forEach(operatorButton => {
 });
 
 const clearButton = document.getElementById("clear");
-const negPosButton = document.getElementById("neg-pos");
-const modButton = document.getElementById("mod");
-const divideButton = document.getElementById("divide");
-const multiButton = document.getElementById("multiply");
-const minusButton = document.getElementById("minus");
-const plusButton = document.getElementById("plus");
+clearButton.addEventListener('click', () => clearFunction());
+
+const posNegButton = document.getElementById("pos-neg");
+posNegButton.addEventListener('click', () => changeSign());
+
 const equalsButton = document.getElementById("equals");
 const pointButton = document.getElementById("point");
 
-// console.log(clearButton.textContent);
-// console.log(negPosButton.textContent);
-// console.log(modButton.textContent);
-// console.log(divideButton.textContent);
-// console.log(multiButton.textContent);
-// console.log(minusButton.textContent);
-// console.log(plusButton.textContent);
-// console.log(equalsButton.textContent);
-// console.log(pointButton.textContent);
 
 function numberInput(num) {
     console.log(num);
@@ -44,7 +35,23 @@ function numberInput(num) {
 
 function operatorInput(operator) {
     console.log(operator);
-    lowerDisplay.textContent += operator;
+    lowerDisplay.textContent += " " + operator;
+    upperDisplay.textContent = lowerDisplay.textContent;
+    lowerDisplay.textContent = "";
 }
 
+function clearFunction() {
+    upperDisplay.textContent = "";
+    lowerDisplay.textContent = "";
+}
+
+function changeSign() {
+    if (lowerDisplay.textContent[0] == "-") {
+        lowerDisplay.textContent = lowerDisplay.textContent.slice(1);
+        lowerDisplay.style.color = "black";
+    } else {
+        lowerDisplay.textContent = "-" + lowerDisplay.textContent;
+        lowerDisplay.style.color = "red";
+    }
+}
 
