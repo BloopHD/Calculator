@@ -1,6 +1,15 @@
+html {
+    min-height: 100%;
+}
+
 body {
-    background-color: rgb(51, 51, 51);
+    background-image: linear-gradient(to bottom right, rgb(149, 255, 155), rgb(255, 208, 0));
+    background-repeat: no-repeat;
     font-family: monospace, sans-serif, serif;
+}
+
+h1 {
+    color: rgb(98, 46, 122);
 }
 
 #body-container {
@@ -18,9 +27,9 @@ body {
     gap: 8px;
     height: 750px;
     width: 500px;
-    background-color: rgb(255, 175, 0);
-    box-shadow: 10px 10px rgba(255, 175, 0, 0.35);
-    border-radius: 25px;
+    background-color: rgb(66, 60, 83);
+    box-shadow: 7.5px 7.5px rgb(44, 40, 56);
+    border-radius: 20px;
     padding: 16px 0 16px 0;
 }
 
@@ -29,10 +38,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    min-height:125px;
+    min-height: 125px;
     max-height: fit-content;
-    width:450px;
-    background-color: beige;
+    width: 450px;
+    background-color: rgb(191, 238, 207);
     border-radius: 25px;
     box-shadow: 2px 2px 5px 2px gray inset;
     margin: 16px 0 16px 0;
@@ -64,6 +73,12 @@ body {
     flex-grow: 1;
 }
 
+#branding {
+    font-size: larger;
+    font-weight: bolder;
+    color: aquamarine;
+}
+
 .row {
     display: flex;
     justify-content: space-evenly;
@@ -75,11 +90,48 @@ body {
 button {
     width: 100px;
     height: 75px;
-    background-color: beige;
-    border-radius: 25px;
+    background-color: rgb(132, 178, 192);
+    border: solid rgb(48, 41, 48);
+    border-radius: 15px;
     font-size: x-large;
+    color: rgb(31, 31, 37);
 }
 
-#zero {
-    width: 200px;
+button:hover {
+    background-color: rgba(132, 178, 192, 0.85);
+    color: rgb(65, 65, 70);
+}
+
+.operator {
+    background-color: rgb(90, 190, 190);
+}
+
+.operator:hover {
+    background-color: rgba(90, 190, 190, 0.85);
+    color: rgb(65, 65, 70);
+}
+
+.clear, .delete, .pos-neg {
+    background-color: rgb(80, 131, 190);
+}
+
+.clear:hover, .delete:hover, .pos-neg:hover{
+    background-color: rgba(80, 131, 190, 0.85);
+    color: rgb(65, 65, 70);
+}
+
+.equals {
+    background-color: rgb(90, 190, 143);
+}
+
+.equals:hover {
+    background-color: rgba(90, 190, 143, 0.85);
+    color: rgb(65, 65, 70);
+}
+
+#trademark {
+    margin: 25px;
+    justify-content: center;
+    text-align: center;
+    color: rgb(98, 46, 122);
 }
